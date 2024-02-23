@@ -1,0 +1,281 @@
+.stop{
+    position: fixed !important;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+.background{
+    background: #fff !important;
+    z-index: 1000;
+    position: relative;
+}
+
+.services.section{
+    margin-top: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+.row-main-section{
+    width: 85%;
+    height: 85%;
+    display: grid;
+    grid-template-columns: minmax(300px,15%) 70%;
+    gap: 10px;
+    padding: 10px;
+    overflow: hidden;
+}
+
+.row-main-section-text{
+    display: grid;
+    grid-template-rows: 20% 80%;
+    gap: 20px;
+}
+
+
+.description{
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+}
+
+.description > div{
+    width: 90%;
+}
+
+
+.map-container{
+    height: 500px;
+	width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#map {
+	width: 100%;
+    height: 100%;
+}
+
+#sections{
+    display: none;
+}
+
+.row-main-section-video{
+    width: 100%;
+    height: 100%;
+}
+
+.row-main-section-video > #video{
+    width: 100%;
+    height: 100%;
+}
+
+#carouselExampleIndicators{
+    height: 500px;
+}
+
+.profile{
+    display: grid;
+    grid-template-rows: 20% 70% 10%;
+    align-items: center;
+    padding: 20px;
+}
+
+.profile-user{
+    display: grid;
+    grid-template-columns: 10% 90%;
+    align-items: center;
+}
+
+.profile-user > i {
+    justify-self: flex-start;
+    font-size: 20px;
+}
+
+.profile-user > h2 {
+    font-size: 20px;
+}
+
+.text-button{
+    justify-self: center;
+}
+
+.text-button i{
+    font-size: 20px;
+}
+
+
+.container-part-horse{
+    display: grid;
+    grid-template-rows: 10% 80% 10%;
+}
+
+.title-part-horse{
+    padding: 20px;
+    font-size: 20px;
+}
+
+.carousel-inner{
+    height: 100%;
+}
+
+.carousel-item{
+    height: 100%;
+}
+
+.carousel-item > div{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 70%;
+    grid-template-rows: repeat(2,40%);
+    justify-content: center;
+    align-items: center;
+    gap: 10px;    
+}
+
+.carousel-item > div:has(:only-child){
+    grid-template-rows: 100%;
+}
+
+
+
+.parts-house{
+    justify-self: center;
+    cursor: pointer;
+}
+
+.parts-house > img{
+    width: 100%;
+}
+
+.indicators{
+    width: 100%;
+    height: 100px;
+    margin-top: -100px;
+    display: flex;
+    justify-content: center;
+}
+
+.indicators > div{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.indicators .indicators-slide{
+    height: 7px;
+    width: 30px;
+    background: #00000091;
+    cursor: pointer;
+    z-index: 5;
+}
+
+.arrows{
+    position: absolute;
+    top: calc(-30px - 100px);
+    left: calc(50vw - 15px);
+    width: 30px;
+    height: 200px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    animation: animate 2s infinite;
+    align-items: center;
+}
+
+
+.arrows div{
+    position: fixed;
+    top: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+}
+
+.arrows div:nth-child(2){
+    top: -5px;
+}
+
+.more-info{
+    position: absolute;
+    top: -40px;
+    left: calc(50vw - 70px);
+    width: 140px;
+    background: #000;
+    font-weight: 700;
+    color: #fff;
+    text-align: center;
+}
+
+@keyframes animate {
+    0%{
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(35px);
+    }
+}
+
+@media (max-width: 1158px) {
+    .row-main-section{
+        width: 95%;
+        grid-template-columns: minmax(300px,15%) 70%;
+    }
+}
+
+
+@media (max-width: 1054px) {
+    .arrows{
+        top: calc(-80px - 100px);
+    }
+
+    .more-info{
+        top: -90px;
+    }
+
+
+    #sections{
+        display: block;
+    }
+    
+    .row-main-section-video{
+        display: grid;
+        grid-template-rows: 30px calc(100% - 30px);
+        gap: 30px;
+    }
+
+
+    .row-main-section{
+        grid-template-columns: 100% !important;
+        grid-template-rows: 95vw;
+        overflow: unset;
+    }
+
+    .row-main-section-text{
+        display: none;
+    }
+
+    .description{
+        height: 450px;
+        font-size: 28px;
+    }
+
+    .services{
+        padding-top: 20px;
+    }
+} 
+
+
+
+
+
