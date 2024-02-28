@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<head>
 	<meta name="generator" content="Hugo 0.123.4">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -17,6 +17,9 @@
     integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/index.css">
+
+  <link rel="stylesheet" href="https://vjs.zencdn.net/5.10.4/video-js.css" />
+  <link rel="stylesheet" href="https://cdn.rawgit.com/yanwsh/videojs-panorama/master/dist/videojs-panorama.css" />
 </head>
 
 <body>
@@ -126,8 +129,10 @@
             <option value="60">Parte 3</option>
           </select>
           <div class="container-video">
-            <div id="video"></div>
-            <div class="iphone"></div>
+              <video id="iphoneVideo" class="d-none player video-js vjs-default-skin vjs-big-play-centered" crossorigin="anonymous" preload="metadata" autoplay controls>
+                <source src="https://www.googleapis.com/drive/v3/files/1wtzdbEy2JLThaPcBIAFYrQ4xjYt6vs86?alt=media&key=AIzaSyDzluYHUntGNcKQYC680LO6SPDh2Wg_1_Q" type='video/mp4'>
+              </video>
+              <div id="deviceVideo" class="d-none"></div>
           </div>
         </div>
       </div>
@@ -239,15 +244,8 @@
     </footer>
   </div>
 
-  <script src="https://www.youtube.com/iframe_api"></script>
   <script src="js/custom.js"></script>
-  <script src="vendor/jquery/jquery.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-    crossorigin="anonymous"></script>
-  <script
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDaeWicvigtP9xPv919E-RNoxfvC-Hqik&callback=iniciarMap"></script>
-
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDaeWicvigtP9xPv919E-RNoxfvC-Hqik&callback=iniciarMap"></script>
 </body>
 
 </html>

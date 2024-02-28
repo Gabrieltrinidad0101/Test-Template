@@ -75,7 +75,8 @@
     position: relative;
 }
 
-.container-video > #video{
+#iphoneVideo,
+#deviceVideo{
     width: 100%;
     height: 100%;
 }
@@ -231,6 +232,7 @@
     color: #fff;
     text-align: center;
 }
+
 
 @keyframes animate {
     0%{
