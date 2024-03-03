@@ -15,6 +15,12 @@ function iniciarMap() {
   });
 }
 
+if (!/iPhone/i.test(navigator.userAgent)) {
+  Iphone().catch(error => console.log(error))
+} else {
+  AllDeviceExpectIphone().catch(error => console.log(error))
+}
+
 indicatorsSlide.forEach(indicatorSlide => {
   indicatorSlide.addEventListener("click", () => {
     carouselsItem.forEach(element => element.classList.remove("active"))
@@ -23,55 +29,35 @@ indicatorsSlide.forEach(indicatorSlide => {
 })
 
 
-// Function to dynamically load a script
-function loadScript(url) {
-  return new Promise((resolve, reject) => {
-    const script = document.createElement('script');
-    script.src = url;
-    script.onload = resolve;
-    script.onerror = reject;
-    document.head.appendChild(script);
-  });
-}
-
-const Iphone = async () => {
-  try {
-    await loadScript('https://vjs.zencdn.net/5.10.4/video.js');
-    await loadScript('https://cdnjs.cloudflare.com/ajax/libs/three.js/r76/three.js');
-    await loadScript('https://rawgit.com/yanwsh/videojs-panorama/master/dist/videojs-panorama.v5.js');
-
-    iphoneVideo.classList.remove("d-none")
-    const options = {
-      plugins: {
-        panorama: {
-          clickAndDrag: true,
-          clickToToggle: true,
-          autoMobileOrientation: true,
-          backToVerticalCenter: false,
-          backToHorizonCenter: false
-        }
+async function Iphone(){
+  await loadScript('https://vjs.zencdn.net/5.10.4/video.js');
+  await loadScript('https://cdnjs.cloudflare.com/ajax/libs/three.js/r76/three.js');
+  await loadScript('https://rawgit.com/yanwsh/videojs-panorama/master/dist/videojs-panorama.v5.js');
+  iphoneVideo.classList.remove("d-none")
+  const options = {
+    plugins: {
+      panorama: {
+        clickAndDrag: true,
+        clickToToggle: true,
+        autoMobileOrientation: true,
+        backToVerticalCenter: false,
+        backToHorizonCenter: false
       }
-    };
-    videojs('iphoneVideo', options, function () { });
-  } catch (error) {
-    console.error('Error loading scripts:', error);
-  }
+    }
+  };
+  const player = videojs('iphoneVideo', options, function () { });
+  player.on('fullscreenchange', async () => {
+    if (player.isFullscreen()) return
+    const canvas = document.querySelector(".vjs-video-canvas")
+    await new Promise(res => setTimeout(res, 500))
+    canvas.style = "width: 100%;height: 100%"
+  });
+  changeTimeLine(time => player.currentTime(time))
 }
 
 
-const AllDeviceExpectIphone = async () => {
-  try {
-    await loadScript('https://www.youtube.com/iframe_api');
-  } catch (error) {
-    console.error('Error loading scripts:', error);
-  }
-}
-
-
-if ((/iPhone/i.test(navigator.userAgent))) {
-  Iphone()
-} else {
-  AllDeviceExpectIphone()
+async function AllDeviceExpectIphone() {
+  await loadScript('https://www.youtube.com/iframe_api');
 }
 
 function onYouTubeIframeAPIReady() {
@@ -86,15 +72,31 @@ function onYouTubeIframeAPIReady() {
       autoplay: 0, // Autoplay is disabled
     }
   });
+  changeTimeLine(time => player.seekTo(time))
+}
 
+
+
+const changeTimeLine = (cb) => {
   sections.addEventListener("change", (e) => {
-    player.seekTo(e.target.value);
+    cb(e.target.value)
   })
 
   partsHouse.forEach(part => {
     part.addEventListener("click", () => {
       const value = part.getAttribute("value")
-      player.seekTo(value)
+      cb(value)
     })
   })
+}
+
+// Function to dynamically load a script
+function loadScript(url) {
+  return new Promise((resolve, reject) => {
+    const script = document.createElement('script');
+    script.src = url;
+    script.onload = resolve;
+    script.onerror = reject;
+    document.head.appendChild(script);
+  });
 }
