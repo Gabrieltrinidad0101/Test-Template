@@ -15,7 +15,7 @@ function iniciarMap() {
   });
 }
 
-if (!/iPhone/i.test(navigator.userAgent)) {
+if (/iPhone/i.test(navigator.userAgent)) {
   Iphone().catch(error => console.log(error))
 } else {
   AllDeviceExpectIphone().catch(error => console.log(error))
