@@ -112,8 +112,5 @@ function loadScript(url) {
   });
 }
 
-if(window.innerWidth <= 1054){
-  var myModal = new bootstrap.Modal(document.getElementById('dealer'))
-  myModal.show()
-}
-
+var myModal = new bootstrap.Modal(document.getElementById('dealer'))
+myModal.show()
