@@ -125,7 +125,9 @@
     width: 100%;
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 5px;
+    margin-top: 15px;
 }
 
 .text-button i{
@@ -165,7 +167,6 @@
 .carousel-item > div:has(:only-child){
     grid-template-rows: 100%;
 }
-
 
 
 .parts-house{
