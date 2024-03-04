@@ -253,8 +253,6 @@
                 -1px -1px 10px #ffffff;
 }
 
-<<<<<<< HEAD
-=======
 .modal-header{
     padding: 1rem 0rem 1rem 1rem;
 }
@@ -275,7 +273,6 @@
 } 
 
 
->>>>>>> master
 .modal-header > .btn-close{
     margin-bottom: 50px;
     position: absolute;
@@ -290,13 +287,10 @@
     font-weight: 700;
 }
 
-<<<<<<< HEAD
-=======
 .modal-body{
     padding: 0rem 1rem 1rem 1rem;
 }
 
->>>>>>> master
 
 @keyframes animate {
     0%{
@@ -378,11 +372,7 @@
     }
 } 
 
-<<<<<<< HEAD
-@media (max-width: 542px) {
-=======
 @media (max-width: 580px) {
->>>>>>> master
     .modal-content{
         width: 95%;
         margin: auto;
