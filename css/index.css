@@ -383,6 +383,11 @@
         margin-left: calc(100% - 2.5rem);
     }
 
+    .text-button{
+        margin-top: 25px;
+    }
+
+
 }
 
 
