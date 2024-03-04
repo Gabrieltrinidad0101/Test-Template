@@ -70,7 +70,7 @@
           <div class="row-main-section-card">
             <div class="service-item">
               <div class="container-part-horse">
-                <h2 class="title-part-horse">PARTES DE LA CASA</h2>
+                <h2 class="title-part-horse">SELECCIONA SESIÓN</h2>
                 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-bs-interval="false">
                   <div class="carousel-inner">
                     <div class="carousel-item active">
@@ -79,13 +79,13 @@
                             <img
                               src="images/Screenshot1.png"
                               alt="">
-                            <h6>Parte 1</h6>
+                            <h6 class="pt-2">SESIÓN 1</h6>
                           </div>
                           <div class="parts-house" value="35">
                             <img
                               src="images/Screenshot2.png"
                               alt="">
-                            <h6>Parte 2</h6>
+                            <h6 class="pt-2">SESIÓN 2</h6>
                           </div>
                       </div>
                     </div>
@@ -95,7 +95,7 @@
                           <img
                             src="images/Screenshot3.png"
                             alt="">
-                          <h6>Parte 3</h6>
+                          <h6 class="pt-2">SESIÓN 3</h6>
                         </div>
                       </div>
                     </div>
@@ -123,16 +123,13 @@
         </div>
 
         <div class="row-main-section-video">
-          <select id="sections" class="form-control form-control-lg">
-            <option value="0">Parte 1</option>
-            <option value="35">Parte 2</option>
-            <option value="60">Parte 3</option>
-          </select>
+            <select id="sections" class="form-control form-control-lg">
+              <option value="" disabled selected hidden>SELECCIONA SESIÓN</option>
+              <option value="0">SESIÓN 1</option>
+              <option value="35">SESIÓN 2</option>
+              <option value="60">SESIÓN 3</option>
+            </select>
           <div class="container-video">
-              <video id="iphoneVideo" class="d-none player video-js vjs-default-skin vjs-big-play-centered" crossorigin="anonymous" preload="metadata" autoplay controls>
-                <source src="https://www.googleapis.com/drive/v3/files/1wtzdbEy2JLThaPcBIAFYrQ4xjYt6vs86?alt=media&key=AIzaSyDzluYHUntGNcKQYC680LO6SPDh2Wg_1_Q" type='video/mp4'>
-              </video>
-              <div id="deviceVideo" class="d-none"></div>
           </div>
         </div>
       </div>
