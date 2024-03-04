@@ -329,7 +329,7 @@
     }
 } 
 
-@media (max-width: 542px) {
+@media (max-width: 580px) {
     .modal-content{
         width: 95%;
         margin: auto;
