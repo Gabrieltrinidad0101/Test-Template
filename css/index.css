@@ -108,13 +108,13 @@
 
 .profile-user{
     display: grid;
-    grid-template-columns: 10% 90%;
+    grid-template-columns: 40px calc(100% - 40px);
     align-items: center;
 }
 
 .profile-user > i {
     justify-self: flex-start;
-    font-size: 20px;
+    font-size: 30px;
 }
 
 .profile-user > h2 {
@@ -260,7 +260,7 @@
 .modal-title{
     width: 100%;
     display: grid;
-    grid-template-columns: 20% 80%;
+    grid-template-columns: 20% 60%;
 }
 
 .modal-title i{
