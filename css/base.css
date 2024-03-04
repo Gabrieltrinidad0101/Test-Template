@@ -1038,10 +1038,7 @@ Services Style
     margin-bottom: 20px;
 }
 
-.service-item:hover h4,
-.service-item:hover p,
-.service-item:hover .text-button a,
-.service-item:hover h2,
+.service-item:hover > *,
 .service-item:hover i
  {
     color: #fff;
