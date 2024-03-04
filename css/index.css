@@ -21,15 +21,14 @@
     width: 85%;
     height: 85%;
     display: grid;
-    grid-template-columns: minmax(300px,15%) 70%;
+    grid-template-columns: minmax(350px,15%) 70%;
     gap: 10px;
     padding: 10px;
-    overflow: hidden;
 }
 
 .row-main-section-text{
     display: grid;
-    grid-template-rows: 20% 80%;
+    grid-template-rows: 25% 75%;
     gap: 20px;
 }
 
@@ -254,6 +253,29 @@
                 -1px -1px 10px #ffffff;
 }
 
+<<<<<<< HEAD
+=======
+.modal-header{
+    padding: 1rem 0rem 1rem 1rem;
+}
+
+.modal-title{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 20% 80%;
+}
+
+.modal-title i{
+    font-size: 50px;
+}
+
+
+.modal-title > h2{
+    text-align: center;
+} 
+
+
+>>>>>>> master
 .modal-header > .btn-close{
     margin-bottom: 50px;
     position: absolute;
@@ -268,6 +290,13 @@
     font-weight: 700;
 }
 
+<<<<<<< HEAD
+=======
+.modal-body{
+    padding: 0rem 1rem 1rem 1rem;
+}
+
+>>>>>>> master
 
 @keyframes animate {
     0%{
@@ -296,7 +325,23 @@
     .more-info{
         top: -90px;
     }
+    
 
+    .service-item{
+        text-align: initial;
+    }
+    .service-item.first-service.profile{
+        display: grid;
+        grid-template-rows: 50px 50% calc(20% - 50px);
+    }
+
+    .service-item.first-service.profile > .profile-user{
+        grid-template-columns: 70px calc(100% - 70px);
+    }
+
+    .service-item.first-service.profile > .profile-user i{
+        font-size: 50px;
+    }
 
     #sections{
         display: block;
@@ -311,11 +356,15 @@
 
     .row-main-section{
         grid-template-columns: 100% !important;
-        grid-template-rows: 95vw;
         overflow: unset;
+        gap: 20px;
     }
 
     .row-main-section-text{
+        gap: 0px;
+    }
+
+    .row-main-section-text > .row-main-section-card:nth-child(2){
         display: none;
     }
 
@@ -329,7 +378,11 @@
     }
 } 
 
+<<<<<<< HEAD
 @media (max-width: 542px) {
+=======
+@media (max-width: 580px) {
+>>>>>>> master
     .modal-content{
         width: 95%;
         margin: auto;
