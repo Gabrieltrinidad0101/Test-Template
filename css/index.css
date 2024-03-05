@@ -127,6 +127,7 @@
     justify-content: center;
     align-items: center;
     gap: 5px;
+    margin-top: 5px;
 }
 
 .text-button i{
@@ -328,6 +329,7 @@
 
     .service-item{
         text-align: initial;
+        height: auto;
     }
 
     .service-item.first-service.profile{
