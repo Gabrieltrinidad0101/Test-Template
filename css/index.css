@@ -348,15 +348,6 @@
 
 
 @media (max-width: 1054px) {
-
-    .arrows{
-        top: calc(-80px - 100px);
-    }
-
-    .more-info{
-        top: -90px;
-    }
-
     .service-item{
         text-align: initial;
         height: auto;
