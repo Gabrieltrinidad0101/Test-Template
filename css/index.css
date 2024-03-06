@@ -210,7 +210,7 @@
 
 .arrows{
     position: absolute;
-    top: calc(-30px - 100px);
+    top: -100px;
     left: calc(50vw - 15px);
     width: 30px;
     height: 200px;
@@ -238,7 +238,7 @@
 
 .more-info{
     position: absolute;
-    top: -40px;
+    top: calc(-55px - 100px);
     left: calc(50vw - 70px);
     width: 140px;
     background: #000;
