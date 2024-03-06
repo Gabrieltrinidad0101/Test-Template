@@ -3,6 +3,7 @@ const indicatorsSlide = document.querySelectorAll(".indicators-slide")
 const carouselsItem = document.querySelectorAll(".carousel-item")
 const sections = document.getElementById("sections")
 const containerVideo = document.querySelector(".container-video")
+const miniModalMessage = document.querySelector(".mini-modal-message")
 const videoId = "ByBkOs_3qk4"
 
 function iniciarMap() {
@@ -112,5 +113,9 @@ function loadScript(url) {
   });
 }
 
-var myModal = new bootstrap.Modal(document.getElementById('dealer'))
-myModal.show()
+var dealerModal = new bootstrap.Modal(document.getElementById('dealer'))
+dealerModal.show()
+
+miniModalMessage.addEventListener("click",()=>{
+  dealerModal.show()
+})
