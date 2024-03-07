@@ -7,7 +7,7 @@ const miniModalMessage = document.querySelector(".mini-modal-message")
 const videoId = "ByBkOs_3qk4"
 
 function iniciarMap() {
-  var coord = { lat: -34.5956145, lng: -58.4431949 };
+  var coord = { lat: 18.4626, lng: -69.9361 };
   new google.maps.Map(document.getElementById('map'), {
     zoom: 10,
     center: coord
