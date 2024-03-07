@@ -28,7 +28,7 @@ indicatorsSlide.forEach(indicatorSlide => {
 })
 
 async function Iphone(){
-  containerVideo.innerHTML = `<video id='iphoneVideo' class='player video-js vjs-default-skin vjs-big-play-centered' crossorigin='anonymous' preload='metadata' autoplay controls><source src='https://www.googleapis.com/drive/v3/files/1x4-Gc-RQCqjNMx4OglkwOzVFhB6N9SUj?alt=media&key=AIzaSyBas-XafATbVo39dPPYrpdhULpbT3f9eYg' type='video/mp4'></video>`
+  containerVideo.innerHTML = `<video id='iphoneVideo' class='player video-js vjs-default-skin vjs-big-play-centered' crossorigin='anonymous' preload='metadata' controls muted><source src='https://www.googleapis.com/drive/v3/files/1x4-Gc-RQCqjNMx4OglkwOzVFhB6N9SUj?alt=media&key=AIzaSyBas-XafATbVo39dPPYrpdhULpbT3f9eYg' type='video/mp4'></video>`
   await loadScript('https://vjs.zencdn.net/5.10.4/video.js');
   await loadScript('https://cdnjs.cloudflare.com/ajax/libs/three.js/r76/three.js');
   await loadScript('https://rawgit.com/yanwsh/videojs-panorama/master/dist/videojs-panorama.v5.js');
