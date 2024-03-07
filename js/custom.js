@@ -44,6 +44,7 @@ async function Iphone(){
     }
   };
   const player = videojs('iphoneVideo', options, function () { });
+  player.muted(true);
   const screenSize = document.querySelector(".vjs-fullscreen-control.vjs-control.vjs-button")
   player.on('fullscreenchange', async () => {
     if (player.isFullscreen()) return
