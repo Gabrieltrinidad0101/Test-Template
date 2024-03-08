@@ -6,6 +6,20 @@ const containerVideo = document.querySelector(".container-video")
 const miniModalMessage = document.querySelector(".mini-modal-message")
 const videoId = "ByBkOs_3qk4"
 
+function iniciarMap() {
+  var coord =  { lat: 18.4626, lng: -69.9361 };
+  
+  const map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 10,
+    center: coord
+  });
+
+  new google.maps.Marker({
+    position: new google.maps.LatLng(coord.lat, coord.lng),
+    map: map
+  });
+}
+
 if (/iPhone/i.test(navigator.userAgent)) {
   Iphone().catch(error => console.log(error))
 } else {
